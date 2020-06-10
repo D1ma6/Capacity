@@ -1,0 +1,2 @@
+# Capacity
+Capacity is a Korean fashion agency that provides a link between fashion suppliers, including designers and producers, and fashion retailers. Capacity a complete package of services to their suppliers including sales, brand management, finance and distribution services. Korean fashion is all about the comfort as their every clothing apparel is oversized, be it cardigans, sweatshirts, sweaters or any other clothing.
