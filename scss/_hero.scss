@@ -1,0 +1,197 @@
+// hero
+.hero {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 32% 8% 36% 24%;
+  grid-column: 1 / 5;
+
+  position: relative;
+
+  padding: 135px 0 0 0;
+
+  &::before {
+    content: "";
+    height: 600px;
+    width: 200%;
+
+    right: -140%;
+    position: absolute;
+    background: #00c3e3;
+    z-index: -1;
+  }
+
+  // hero__description
+  &__description {
+    max-width: 198px;
+    font-weight: 500;
+    margin: 274px 0 0 10px;
+  }
+
+  // hero__content
+  &__content {
+    display: flex;
+    position: relative;
+    margin: 0 0 0 10px;
+
+    // hero__content__titles
+    &__titles {
+      position: absolute;
+
+      margin: 50px 0 0 0;
+      left: -198px;
+
+      // hero__content__titles__korean
+      &__korean {
+        position: relative;
+        // hero__content__titles__korean__text
+        &__text {
+          position: absolute;
+          font-size: 72px;
+          font-weight: 400;
+
+          &:last-child {
+            color: #ffffff;
+            clip-path: polygon(75.8% 0, 100% 0, 100% 100%, 75.8% 100%);
+          }
+        }
+      }
+      // hero__content__titles__fashion
+      &__fashion {
+        position: relative;
+
+        margin: 89px 0 0 50px;
+        // hero__content__titles__fashion__text
+        &__text {
+          position: absolute;
+          font-size: 64px;
+          font-weight: 400;
+
+          &:last-child {
+            color: #ffffff;
+            clip-path: polygon(57% 0, 100% 0, 100% 100%, 57% 100%);
+          }
+        }
+      }
+
+      // hero__content__titles__btn
+      &__btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin: 184px 0 0 90px;
+
+        // hero__content__titles__btn__line
+        &__line {
+          width: 1px;
+          height: 150px;
+          background: #1a1a1a;
+        }
+
+        // hero__content__titles__btn__btn
+        &__btn {
+          margin: 10px 0 0 0;
+        }
+      }
+    }
+
+    // hero__content__photo
+    &__photo {
+      position: relative;
+      z-index: -1;
+      height: 100%;
+
+      &::before {
+        content: "";
+        max-width: 40px;
+        width: 100%;
+        height: 2px;
+        background: #003334;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 0 -10px 16px 0;
+      }
+      &::after {
+        content: "Bow tie Hepburn Short sleeves shirt";
+        max-width: 261px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        margin: 0 0 10px 20px;
+      }
+    }
+  }
+
+  // hero__slider
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 76px;
+
+    grid-column: 4 / 5;
+    margin: 125px 0 0 35px;
+
+    // hero__slider__link
+    &__link {
+      font-weight: 500;
+      font-size: 12px;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 15px;
+        height: 2px;
+        background: #1a1a1a;
+
+        position: absolute;
+
+        left: -25px;
+      }
+
+      &-active {
+        color: #fff;
+
+        &::before {
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  // hero__hotDeals
+  &__hotDeals {
+    grid-column: 4 / 5;
+    position: absolute;
+    bottom: 0;
+    margin: 0 50px 62px 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: ">";
+
+      position: absolute;
+      right: -30px;
+    }
+  }
+
+  // hero__socialMedia
+  &__socialMedia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 142px;
+
+    position: absolute;
+    right: -29px;
+    top: 168px;
+  }
+}

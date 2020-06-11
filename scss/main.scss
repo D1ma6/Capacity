@@ -1,7 +1,49 @@
+/* 
+    imports
+*/
+// grid
+@import "./grid";
+// header
+@import "./header";
+// hero
+@import "./hero";
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+// html
+
+// body
+body {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-family: "Roboto Mono", monospace;
+  color: #1a1a1a;
+
+  position: relative;
+  overflow-x: hidden;
+}
+
+// a
+a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+// button
+button {
+  background: none;
+  color: #1a1a1a;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

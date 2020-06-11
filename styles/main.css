@@ -1,3 +1,316 @@
+/* 
+    imports
+*/
+.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 32% 8% 36% 24%;
+      grid-template-columns: 32% 8% 36% 24%;
+  max-width: 1260px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main__gap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1px;
+  height: 100%;
+  background: #1a1a1a;
+  opacity: 0.3;
+  position: absolute;
+  z-index: 10;
+}
+
+.main__gap:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.main__gap:nth-child(2) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.main__gap:nth-child(3) {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+.main__gap:nth-child(4) {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+}
+
+.main__gap:nth-child(5) {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  padding: 30px 10px;
+  position: fixed;
+  max-width: 1260px;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+}
+
+.header__logo {
+  font-size: 14px;
+}
+
+.header__navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 220px;
+  width: 100%;
+  margin: 0 30px 0 0;
+}
+
+.header__navbar__link, .header__contact {
+  color: #fff;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 32% 8% 36% 24%;
+      grid-template-columns: 32% 8% 36% 24%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  position: relative;
+  padding: 135px 0 0 0;
+}
+
+.hero::before {
+  content: "";
+  height: 600px;
+  width: 200%;
+  right: -140%;
+  position: absolute;
+  background: #00c3e3;
+  z-index: -1;
+}
+
+.hero__description {
+  max-width: 198px;
+  font-weight: 500;
+  margin: 274px 0 0 10px;
+}
+
+.hero__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin: 0 0 0 10px;
+}
+
+.hero__content__titles {
+  position: absolute;
+  margin: 50px 0 0 0;
+  left: -198px;
+}
+
+.hero__content__titles__korean {
+  position: relative;
+}
+
+.hero__content__titles__korean__text {
+  position: absolute;
+  font-size: 72px;
+  font-weight: 400;
+}
+
+.hero__content__titles__korean__text:last-child {
+  color: #ffffff;
+  -webkit-clip-path: polygon(75.8% 0, 100% 0, 100% 100%, 75.8% 100%);
+          clip-path: polygon(75.8% 0, 100% 0, 100% 100%, 75.8% 100%);
+}
+
+.hero__content__titles__fashion {
+  position: relative;
+  margin: 89px 0 0 50px;
+}
+
+.hero__content__titles__fashion__text {
+  position: absolute;
+  font-size: 64px;
+  font-weight: 400;
+}
+
+.hero__content__titles__fashion__text:last-child {
+  color: #ffffff;
+  -webkit-clip-path: polygon(57% 0, 100% 0, 100% 100%, 57% 100%);
+          clip-path: polygon(57% 0, 100% 0, 100% 100%, 57% 100%);
+}
+
+.hero__content__titles__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 184px 0 0 90px;
+}
+
+.hero__content__titles__btn__line {
+  width: 1px;
+  height: 150px;
+  background: #1a1a1a;
+}
+
+.hero__content__titles__btn__btn {
+  margin: 10px 0 0 0;
+}
+
+.hero__content__photo {
+  position: relative;
+  z-index: -1;
+  height: 100%;
+}
+
+.hero__content__photo::before {
+  content: "";
+  max-width: 40px;
+  width: 100%;
+  height: 2px;
+  background: #003334;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 -10px 16px 0;
+}
+
+.hero__content__photo::after {
+  content: "Bow tie Hepburn Short sleeves shirt";
+  max-width: 261px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 10px 20px;
+}
+
+.hero__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 76px;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+  margin: 125px 0 0 35px;
+}
+
+.hero__slider__link {
+  font-weight: 500;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.hero__slider__link::before {
+  content: "";
+  width: 15px;
+  height: 2px;
+  background: #1a1a1a;
+  position: absolute;
+  left: -25px;
+}
+
+.hero__slider__link-active {
+  color: #fff;
+}
+
+.hero__slider__link-active::before {
+  background: #fff;
+}
+
+.hero__hotDeals {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+  position: absolute;
+  bottom: 0;
+  margin: 0 50px 62px 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__hotDeals::after {
+  content: ">";
+  position: absolute;
+  right: -30px;
+}
+
+.hero__socialMedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 142px;
+  position: absolute;
+  right: -29px;
+  top: 168px;
+}
+
 *,
 *::before,
 *::after {
@@ -5,5 +318,31 @@
           box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-family: "Roboto Mono", monospace;
+  color: #1a1a1a;
+  position: relative;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+button {
+  background: none;
+  color: #1a1a1a;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

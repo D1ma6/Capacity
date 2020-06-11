@@ -1,0 +1,35 @@
+// header
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  grid-column: 1 / 5;
+
+  padding: 30px 10px;
+
+  position: fixed;
+  max-width: 1260px;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+
+  // header__logo
+  &__logo {
+    font-size: 14px;
+  }
+
+  // header__navbar
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 220px;
+    width: 100%;
+    margin: 0 30px 0 0;
+  }
+
+  &__navbar__link,
+  &__contact {
+    color: #fff;
+  }
+}

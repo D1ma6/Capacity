@@ -1,0 +1,40 @@
+// grid
+.main {
+  display: grid;
+  grid-template-columns: 32% 8% 36% 24%;
+
+  max-width: 1260px;
+  width: 100%;
+
+  margin: 0 auto;
+
+  position: relative;
+
+  &__gap {
+    display: flex;
+    width: 1px;
+    height: 100%;
+    background: #1a1a1a;
+    opacity: 0.3;
+
+    position: absolute;
+    z-index: 10;
+
+    &:nth-child(1) {
+      grid-column: 1 / 2;
+    }
+    &:nth-child(2) {
+      grid-column: 2 / 3;
+    }
+    &:nth-child(3) {
+      grid-column: 3 / 4;
+    }
+    &:nth-child(4) {
+      grid-column: 4 / 5;
+    }
+    &:nth-child(5) {
+      grid-column: 4 / 5;
+      justify-self: end;
+    }
+  }
+}
