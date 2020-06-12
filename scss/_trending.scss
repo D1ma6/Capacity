@@ -1,0 +1,73 @@
+// trending
+.trending {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / 5;
+
+  // trending__title
+  &__title {
+    margin: 0 0 0 50px;
+    font-size: 36px;
+    font-weight: 400;
+  }
+
+  // trending__items
+  &__items {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 30px 0 0 0;
+
+    // trending__items__item
+    &__item {
+      display: flex;
+      flex-direction: column;
+
+      // trending__items__item__title
+      &__title {
+        max-width: 200px;
+        margin: 20px 0 0 15px;
+
+        position: relative;
+
+        &::before {
+          content: "";
+          width: 5px;
+          height: 2px;
+          background: #1a1a1a;
+
+          position: absolute;
+          left: -10px;
+          margin: 6px 0 0 0;
+        }
+      }
+    }
+  }
+
+  // trending__btn
+  &__btn {
+    width: 180px;
+    height: 54px;
+    align-self: center;
+
+    border: 1px solid #1a1a1a;
+
+    margin: 120px 0 0 0;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-image: url("./../images/arrow.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      position: absolute;
+      margin: 4px 0 0 10px;
+
+      pointer-events: none;
+    }
+  }
+}

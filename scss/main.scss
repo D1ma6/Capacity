@@ -9,6 +9,8 @@
 @import "./hero";
 // collection
 @import "./collection";
+// trending
+@import "./trending";
 
 *,
 *::before,
@@ -16,6 +18,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+
+  font-family: "Roboto Mono", monospace;
 }
 
 // html
@@ -37,6 +41,11 @@ body {
 a {
   text-decoration: none;
   color: #1a1a1a;
+}
+
+// section
+section {
+  margin: 100px 0 0 0;
 }
 
 // button

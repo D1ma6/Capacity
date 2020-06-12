@@ -277,7 +277,7 @@
   grid-column: 4 / 5;
   position: absolute;
   bottom: 0;
-  margin: 0 50px 62px 0;
+  margin: 0 50px -20px 0;
   right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -322,7 +322,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 100px 0 0 0;
 }
 
 .collection:nth-of-type(3) {
@@ -473,6 +472,84 @@
   margin: -202px 0 0 -55px;
 }
 
+.trending {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+}
+
+.trending__title {
+  margin: 0 0 0 50px;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.trending__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 0 0 0;
+}
+
+.trending__items__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.trending__items__item__title {
+  max-width: 200px;
+  margin: 20px 0 0 15px;
+  position: relative;
+}
+
+.trending__items__item__title::before {
+  content: "";
+  width: 5px;
+  height: 2px;
+  background: #1a1a1a;
+  position: absolute;
+  left: -10px;
+  margin: 6px 0 0 0;
+}
+
+.trending__btn {
+  width: 180px;
+  height: 54px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 1px solid #1a1a1a;
+  margin: 120px 0 0 0;
+  position: relative;
+}
+
+.trending__btn::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-image: url("./../images/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  margin: 4px 0 0 10px;
+  pointer-events: none;
+}
+
 *,
 *::before,
 *::after {
@@ -480,6 +557,7 @@
           box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Roboto Mono", monospace;
 }
 
 body {
@@ -496,6 +574,10 @@ body {
 a {
   text-decoration: none;
   color: #1a1a1a;
+}
+
+section {
+  margin: 100px 0 0 0;
 }
 
 button {
