@@ -70,11 +70,9 @@
   -ms-grid-column-span: 4;
   grid-column: 1 / 5;
   padding: 30px 10px;
-  position: fixed;
   max-width: 1260px;
   width: 100%;
-  z-index: 1000;
-  top: 0;
+  z-index: 2;
 }
 
 .header__logo {
@@ -108,6 +106,7 @@
   -ms-grid-column-span: 4;
   grid-column: 1 / 5;
   position: relative;
+  margin: -80px 0 0 0;
   padding: 135px 0 0 0;
 }
 
@@ -289,9 +288,14 @@
 }
 
 .hero__hotDeals::after {
-  content: ">";
+  content: "";
+  background-image: url("./../images/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 12px;
+  height: 12px;
   position: absolute;
-  right: -30px;
+  right: -41px;
 }
 
 .hero__socialMedia {
@@ -309,6 +313,164 @@
   position: absolute;
   right: -29px;
   top: 168px;
+}
+
+.collection {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 100px 0 0 0;
+}
+
+.collection:nth-of-type(3) {
+  margin: 50px 0 0 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.collection__gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.collection__gallery__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.collection__gallery__bottom__description {
+  max-width: 351px;
+  margin: 30px 30px 0 25px;
+}
+
+.collection__gallery__bottom__description__btn {
+  font-size: 14px;
+  margin: 50px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.collection__gallery__bottom__description__btn::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-image: url("./../images/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: -41px;
+  pointer-events: none;
+}
+
+.collection__gallery__bottom__img {
+  margin: -202px -55px 0 0;
+}
+
+.collection__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 0 0 60px;
+}
+
+.collection__items__title {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.collection__items__navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.collection__items__navbar__link {
+  margin: 20px 0 0 10px;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.collection__items__navbar__link::before {
+  content: "";
+  width: 5px;
+  height: 2px;
+  background: #1a1a1a;
+  left: -10px;
+  margin: 1px 0 0 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.collection__items__navbar__link:last-child {
+  margin: 30px 0 0 10px;
+}
+
+.womensCollection .collection__items__title {
+  margin: 0 -13px 0 0;
+}
+
+.womensCollection .collection__items {
+  margin: 0 70px 0 0;
+}
+
+.womensCollection .collection__items__navbar__link {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 20px 10px 0 0;
+}
+
+.womensCollection .collection__items__navbar__link::before {
+  display: none;
+}
+
+.womensCollection .collection__items__navbar__link::after {
+  content: "";
+  width: 5px;
+  height: 2px;
+  background: #1a1a1a;
+  right: -10px !important;
+  margin: 1px 0 0 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.womensCollection .collection__gallery__bottom__description {
+  margin: 30px 25px 0 30px;
+}
+
+.womensCollection .collection__gallery__bottom__img {
+  margin: -202px 0 0 -55px;
 }
 
 *,
