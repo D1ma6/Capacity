@@ -550,6 +550,105 @@
   pointer-events: none;
 }
 
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  position: relative;
+}
+
+.about::before {
+  content: "";
+  width: 200%;
+  left: -124%;
+  height: 530px;
+  background: #00c3e3;
+  position: absolute;
+  z-index: -1;
+}
+
+.about__title {
+  margin: 40px 0 0 20px;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.about__subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 0 20px;
+}
+
+.about__content {
+  margin: 30px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__content__img {
+  position: relative;
+}
+
+.about__content__img::before {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: #1a1a1a;
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  margin: 0 0 11px 0;
+}
+
+.about__content__img::after {
+  content: "Our team (Stacy, Ketty, Elan and Cloe)";
+  position: absolute;
+  right: -310px;
+  bottom: 0;
+  margin: 0 0 5px 0;
+}
+
+.about__content__right {
+  margin: 0 0 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about__content__right__description {
+  max-width: 595px;
+  margin: 20px 0 0 0;
+  font-size: 14px;
+}
+
+.about__content__right__description:first-child {
+  margin: 0;
+}
+
+.about__content__right__description__text {
+  margin: 30px 0 0 0;
+}
+
+.about__content__right__description__btn {
+  width: 130px;
+  height: 44px;
+  border: 1px solid #1a1a1a;
+  margin: 50px 0 0 0;
+}
+
 *,
 *::before,
 *::after {
