@@ -1,0 +1,27 @@
+// partners
+.partners {
+  grid-column: 1 / 5;
+  width: 100%;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  // partners__title
+  &__title {
+    font-size: 36px;
+    font-weight: 400;
+  }
+
+  // partners__items
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 900px;
+    width: 100%;
+
+    margin: 50px 0 0 0;
+  }
+}

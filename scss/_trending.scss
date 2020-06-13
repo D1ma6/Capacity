@@ -46,28 +46,7 @@
 
   // trending__btn
   &__btn {
-    width: 180px;
-    height: 54px;
     align-self: center;
-
-    border: 1px solid #1a1a1a;
-
     margin: 120px 0 0 0;
-
-    position: relative;
-
-    &::after {
-      content: "";
-      width: 10px;
-      height: 10px;
-      background-image: url("./../images/arrow.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-
-      position: absolute;
-      margin: 4px 0 0 10px;
-
-      pointer-events: none;
-    }
   }
 }

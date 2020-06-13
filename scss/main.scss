@@ -13,6 +13,10 @@
 @import "./trending";
 // about
 @import "./about";
+// blog
+@import "./blog";
+// partners
+@import "./partners";
 
 *,
 *::before,
@@ -58,5 +62,52 @@ button {
 
   &:hover {
     cursor: pointer;
+  }
+}
+
+// main__btn
+.main__btn {
+  width: 130px;
+  height: 54px;
+
+  border: 1px solid #1a1a1a;
+
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-image: url("./../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: absolute;
+    margin: 4px 0 0 10px;
+
+    pointer-events: none;
+  }
+}
+// main__btn
+.secondary__btn {
+  width: 180px;
+  height: 54px;
+
+  border: 1px solid #1a1a1a;
+
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-image: url("./../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: absolute;
+    margin: 4px 0 0 10px;
+
+    pointer-events: none;
   }
 }
