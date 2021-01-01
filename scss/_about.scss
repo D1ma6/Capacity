@@ -92,3 +92,47 @@
     }
   }
 }
+@media only screen and (max-width: 1300px) {
+  .about {
+    &__content {
+      &__img {
+        max-width: 532px;
+        overflow: hidden;
+        & > img {
+          height: 100%;
+          object-position: center;
+        }
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+      &__right {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 920px) {
+  .about {
+    &__content {
+      flex-direction: column;
+
+      &__img {
+        max-width: 100%;
+        max-height: 500px;
+        & > img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      &__right {
+        margin: 40px 20px 0 20px;
+        &__description {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

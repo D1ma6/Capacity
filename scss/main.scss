@@ -31,7 +31,16 @@
 }
 
 // html
-
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+}
+// wrapper
+.wrapper {
+  overflow: hidden;
+}
 // body
 body {
   width: 100%;

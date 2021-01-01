@@ -8,7 +8,7 @@
 
   position: relative;
 
-  margin: -80px 0 0 0;
+  margin: -20px 0 0 0;
 
   padding: 135px 0 0 0;
 
@@ -103,6 +103,7 @@
       position: relative;
       z-index: -1;
       height: 100%;
+      max-height: 512px;
 
       &::before {
         content: "";
@@ -171,7 +172,7 @@
   &__hotDeals {
     grid-column: 4 / 5;
     position: absolute;
-    bottom: 0;
+    bottom: 65px;
     margin: 0 50px -20px 0;
     right: 0;
     display: flex;
@@ -200,5 +201,238 @@
     position: absolute;
     right: -29px;
     top: 168px;
+  }
+}
+
+// media queries
+@media only screen and (max-width: 1320px) {
+  // hero
+  .hero {
+    // hero__socialMedia
+    &__socialMedia {
+      right: 0px;
+
+      margin: 0 20px 0 0;
+    }
+  }
+}
+@media only screen and (max-width: 1120px) {
+  // hero
+  .hero {
+    &__description {
+      max-width: 130px;
+    }
+    &__content {
+      &__photo {
+        &::after {
+          width: 60%;
+          margin: 0 0 -6px 20px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  // hero
+  .hero {
+    &__description {
+    }
+    &__content {
+      &__photo {
+        &::before {
+          left: 8px;
+          max-width: 20px;
+          margin: 0 0 16px 0;
+        }
+        &::after {
+          width: 100% !important;
+
+          left: 28px;
+          bottom: 16px;
+          font-size: 11px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 860px) {
+  // hero
+  .hero {
+    margin-bottom: 50px;
+    &__description {
+      position: absolute;
+      margin: 680px 10px 0 10px;
+      width: 100%;
+      max-width: 100% !important;
+    }
+    &__content {
+      margin: 0 0 0 200px;
+
+      &__photo {
+        &::before {
+          display: none;
+        }
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 820px) {
+  .hero {
+    &::before {
+      height: 440px;
+    }
+
+    &__description {
+      margin: 570px 10px 0 10px;
+    }
+    &__content {
+      width: 340px;
+      &__photo {
+        width: 260px;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 680px) {
+  .hero {
+    margin-bottom: 100px;
+    &::before {
+      height: 300px;
+    }
+
+    &__description {
+      margin: 520px 10px 0 10px;
+    }
+    &__content {
+      &__titles {
+        margin: 30px 0 0 0;
+        left: -176px;
+        &__korean {
+          &__text {
+            font-size: 64px;
+          }
+        }
+        &__fashion {
+          margin: 89px 0 0 60px;
+          &__text {
+            font-size: 48px;
+          }
+        }
+
+        &__btn {
+          &__line {
+            height: 100px;
+          }
+        }
+      }
+
+      width: 340px;
+      &__photo {
+        width: 210px;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 610px) {
+  .hero {
+    &__hotDeals {
+      display: none;
+    }
+    &__description {
+      margin: 400px 10px 0 10px;
+    }
+    &__content {
+      margin: 0 0 0 30vw;
+      &__titles {
+        margin: 30px 0 0 0;
+        left: -110px;
+        &__korean {
+          &__text {
+            font-size: 36px;
+            &:last-child {
+              clip-path: polygon(82% 0, 100% 0, 100% 100%, 82% 100%);
+            }
+          }
+        }
+        &__fashion {
+          margin: 50px 0 0 38px;
+          &__text {
+            font-size: 24px;
+            &:last-child {
+              clip-path: polygon(72% 0, 100% 0, 100% 100%, 72% 100%);
+            }
+          }
+        }
+
+        &__btn {
+          display: none;
+          &__line {
+            height: 100px;
+          }
+        }
+      }
+
+      &__photo {
+        width: 150px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 460px) {
+  .hero {
+    &__slider {
+      margin: 20px 0 0 35px;
+    }
+    &__socialMedia {
+      display: none;
+    }
+  }
+}
+@media only screen and (max-width: 360px) {
+  .hero {
+    &__content {
+      &__titles {
+        margin: 30px 0 0 0;
+        left: -90px;
+        &__korean {
+          &__text {
+            font-size: 36px;
+            &:last-child {
+              clip-path: polygon(67% 0, 100% 0, 100% 100%, 67% 100%);
+            }
+          }
+        }
+        &__fashion {
+          margin: 50px 0 0 38px;
+          &__text {
+            font-size: 24px;
+            &:last-child {
+              clip-path: polygon(51% 0, 100% 0, 100% 100%, 51% 100%);
+            }
+          }
+        }
+
+        &__btn {
+          display: none;
+          &__line {
+            height: 100px;
+          }
+        }
+      }
+
+      &__photo {
+        width: 130px;
+      }
+    }
   }
 }

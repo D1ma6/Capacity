@@ -11,12 +11,19 @@
 
   // collection__gallery
   &__gallery {
+    position: relative;
     display: flex;
     flex-direction: column;
-
+    // collection__gallery__photo
+    &__photo {
+      &__main {
+        width: 100%;
+      }
+    }
     // collection__gallery__bottom
     &__bottom {
       display: flex;
+      position: relative;
 
       //   collection__gallery__bottom__description
       &__description {
@@ -49,6 +56,11 @@
       //   collection__gallery__bottom__img
       &__img {
         margin: -202px -55px 0 0;
+        width: 100%;
+        min-width: 210px;
+        & > img {
+          width: 100%;
+        }
       }
     }
   }
@@ -106,6 +118,7 @@
 .womensCollection {
   .collection__items__title {
     margin: 0 -13px 0 0;
+    text-align: right;
   }
   .collection__items {
     margin: 0 70px 0 0;
@@ -138,5 +151,73 @@
 
   .collection__gallery__bottom__img {
     margin: -202px 0 0 -55px;
+  }
+}
+
+// media queries
+@media only screen and (max-width: 1194px) {
+  // collection
+  .collection {
+    grid-column: 1 / 5;
+
+    display: flex;
+
+    &:nth-of-type(3) {
+      margin: 50px 0 0 0;
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media only screen and (max-width: 1194px) {
+  // collection
+  .collection {
+    grid-column: 1 / 5;
+
+    display: flex;
+
+    &:nth-of-type(3) {
+      margin: 50px 0 0 0;
+      justify-content: flex-end;
+    }
+  }
+}
+@media only screen and (max-width: 680px) {
+  .collection {
+    flex-direction: column;
+
+    &__items {
+      margin: 20px 0 0 10px;
+      &__title {
+        font-size: 28px;
+      }
+    }
+    &__gallery {
+      &__bottom {
+        &__description {
+          margin: 30px 30px 0 10px !important;
+          max-width: 100%;
+        }
+        &__img {
+          margin: -202px 0 0 0;
+          position: absolute;
+          max-width: 200px;
+          top: -60px;
+          right: 0;
+        }
+      }
+    }
+  }
+  .womensCollection {
+    flex-direction: column-reverse;
+    .collection {
+      &__items {
+        margin: 20px 20px 0 0;
+
+        &__title {
+          font-size: 28px;
+        }
+      }
+    }
   }
 }
